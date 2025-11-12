@@ -632,9 +632,15 @@ fn include<W: Write>(context: &mut Context<W>, repo: &mut QemuFileRepo, path: &s
     if context.included.contains(&include_path) {
         return Ok(())
     }
-    context.included.insert(include_path);
+    context.included.insert(include_path.clone());
 
-    let (mut repo, str) = repo.include(path)?;
+    let (mut repo, str) = match repo.include(path) {
+        Ok(val) => val,
+        Err(e) => {
+            let msg = format!("Failed to include file: {}\nError: {:?}", include_path.display(), e);
+            return Err(io::Error::new(e.kind(), msg));
+        }
+    };
     for item in Parser::from_string(Parser::strip_comments(&str)) {
         context.process(item?)?;
     }
