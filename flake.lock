@@ -95,17 +95,17 @@
     "schema": {
       "flake": false,
       "locked": {
-        "lastModified": 1753206370,
-        "narHash": "sha256-ZUezhnA6/yYDUxZkCy651rCQJ8j4+msQgLXOVu7wB7Y=",
+        "lastModified": 1779729206,
+        "narHash": "sha256-EaBKLvq8oZRnoDGO+AJTDrIaSGoOvN/m+ZH7vyDfxcI=",
         "owner": "arcnmx",
         "repo": "qemu-qapi-filtered",
-        "rev": "e7805e8c7ba1e0c6da1b3cce48a12eea122a8e61",
+        "rev": "ae9b8869ead8523846fd61f7832992159a09bef4",
         "type": "github"
       },
       "original": {
         "owner": "arcnmx",
-        "ref": "v10.0.3",
         "repo": "qemu-qapi-filtered",
+        "rev": "ae9b8869ead8523846fd61f7832992159a09bef4",
         "type": "github"
       }
     },
