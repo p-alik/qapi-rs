@@ -98,6 +98,7 @@ pub mod spec {
         DynamicAutoReadOnly,
         SavevmMonitorNodes,
         Fdset,
+        ConfidentialGuestReset,
     }
 
     #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Hash, Deserialize)]
